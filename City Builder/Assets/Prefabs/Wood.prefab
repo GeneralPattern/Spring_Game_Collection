@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8509621941321667097}
   - component: {fileID: 8914094999208527704}
   - component: {fileID: 8450406278212997847}
+  - component: {fileID: -2800885578374072174}
   m_Layer: 0
   m_Name: Wood
   m_TagString: Untagged
@@ -98,3 +99,33 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &-2800885578374072174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5220912763844262521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f872e8670a420b847a73e89db86376aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddWoodResource:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 586df088fb8b9cf4e9102999cb11094f, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: AddValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  AddStoneResource:
+    m_PersistentCalls:
+      m_Calls: []

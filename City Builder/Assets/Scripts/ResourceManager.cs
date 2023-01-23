@@ -19,6 +19,13 @@ public class ResourceManager : MonoBehaviour
     public int maxStandardC;
     int standardC = 0;
 
+    public static ResourceManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     public void AddWood(int amount)
     {
         wood += amount;

@@ -1124,6 +1124,7 @@ GameObject:
   - component: {fileID: 1649344212}
   - component: {fileID: 1649344211}
   - component: {fileID: 1649344213}
+  - component: {fileID: 1649344214}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1176,6 +1177,28 @@ MonoBehaviour:
   levelLength: 20
   tilesHolder: {fileID: 297917365}
   tileSize: 1
+  tileEndHeight: 0.8
+  woodPrefab: {fileID: 5220912763844262521, guid: 715d21a8907623b408a9c276f9770c42, type: 3}
+  rockPrefab: {fileID: 1057665975451819601, guid: aee8a98ae26af2640aded203bcf6ef4c, type: 3}
+  obstacleChance: 0.3
+  xBounds: 3
+  zBounds: 3
+--- !u!114 &1649344214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649344210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b1c0694ca486548a7c3ea7afcd9b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWood: 0
+  maxStone: 0
+  maxPremiumC: 0
+  maxStandardC: 0
 --- !u!1 &1786186655
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8498654838350967157}
   - component: {fileID: 2038289499445890676}
   - component: {fileID: 7251668057210210197}
+  - component: {fileID: -6478559361191831103}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Untagged
@@ -97,3 +98,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-6478559361191831103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057665975451819601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f872e8670a420b847a73e89db86376aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddWoodResource:
+    m_PersistentCalls:
+      m_Calls: []
+  AddStoneResource:
+    m_PersistentCalls:
+      m_Calls: []

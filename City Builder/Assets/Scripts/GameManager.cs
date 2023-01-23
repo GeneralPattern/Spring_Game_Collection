@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int levelLength;
     public Transform tilesHolder;
     public float tileSize = 1;
+    public float tileEndHeight = 1;
 
     [Header("Resources")]
     [Space(8)]
@@ -40,18 +41,23 @@ public class GameManager : MonoBehaviour
             {
                 TileObject spawnedTile = SpawnTile(x * tileSize, z * tileSize);
 
-                if (x < xBounds || z < zBounds)
+                if (x < xBounds || z < zBounds || z >= (levelLength - zBounds) || x >= (levelWidth - xBounds))
                 {
                     spawnedTile.data.StarterTileValue(false);
                 }
 
                 if (spawnedTile.data.CanSpawnObstacle)
                 {
-                    bool spawnObstacle = Random.value <= obstacleChance
+                    bool spawnObstacle = Random.value <= obstacleChance;
 
                     if (spawnObstacle)
                     {
-                        
+                        spawnedTile.data.SetOccupied(Tile.ObstacleType.Resource);
+
+                        SpawnObstacle(spawnedTile.transform.position.x, spawnedTile.transform.position.z);
+
+                        //Debug.Log("Spawned obstacle on " + spawnedTile.gameObject.name);
+                        //spawnedTile.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
                     }
                 }
                 
@@ -66,6 +72,26 @@ public class GameManager : MonoBehaviour
         tmpTile.transform.position = new Vector3(xPos, 0, zPos);
         tmpTile.transform.SetParent(tilesHolder);
 
+        tmpTile.name = "Tile " + xPos + " - " + zPos;
+
         return tmpTile.GetComponent<TileObject>();
+    }
+
+    public void SpawnObstacle(float xPos, float zPos)
+    {
+        bool isWood = Random.value <= 0.5f;
+
+        GameObject spawnedObstacle = null;
+
+        if (isWood)
+        {
+            spawnedObstacle = Instantiate(woodPrefab);
+        }
+        else
+        {
+            spawnedObstacle = Instantiate(rockPrefab);
+        }
+
+        spawnedObstacle.transform.position = new Vector3(xPos, tileEndHeight, zPos);
     }
 }
