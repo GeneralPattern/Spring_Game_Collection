@@ -623,9 +623,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1983480359}
+      - m_Target: {fileID: 1983480358}
         m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
-        m_MethodName: GameStart
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
