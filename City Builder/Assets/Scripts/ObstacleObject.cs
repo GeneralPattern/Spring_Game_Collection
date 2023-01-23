@@ -14,12 +14,11 @@ public class ObstacleObject : MonoBehaviour
 
         if(gameObject.name == "Wood(Clone)")
         {
-            Debug.Log("Chopped Wood");
             AddWoodResource.Invoke();
         }
         if(gameObject.name == "Stone(Clone)")
         {
-            Debug.Log("Mined Stone");
+            AddStoneResource.Invoke();
         }
     }
 

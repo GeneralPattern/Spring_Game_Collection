@@ -7,6 +7,7 @@ public class TextLabelBehaviour : MonoBehaviour
 {
   private Text label;
   public UnityEvent startEvent;
+  public UnityEvent continualUpdate;
 
 
   private void Start() 
@@ -14,6 +15,11 @@ public class TextLabelBehaviour : MonoBehaviour
     label = GetComponent<Text>();
     startEvent.Invoke();
     
+  }
+
+  private void Update()
+  {
+    continualUpdate.Invoke();
   }
   
   public void UpdateLabel(IntData obj)
