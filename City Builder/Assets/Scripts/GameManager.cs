@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     [Header("Resources")]
     [Space(8)]
 
+    public IntData levelSize;
+
     public GameObject woodPrefab;
     public GameObject rockPrefab;
 
@@ -30,6 +32,24 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        if (levelSize.value == 3)
+            {
+                levelLength = 40;
+                levelWidth = 40;
+            }
+        if (levelSize.value == 2)
+            {
+                levelLength = 20;
+                levelWidth = 20;
+            }
+        if (levelSize.value == 1)
+            {
+                levelLength = 10;
+                levelWidth = 10;
+                xBounds = 2;
+                zBounds = 2;
+
+            }
         CreateLevel();
     }
 

@@ -1088,6 +1088,7 @@ MonoBehaviour:
   tilesHolder: {fileID: 297917365}
   tileSize: 1
   tileEndHeight: 0.8
+  levelSize: {fileID: 11400000, guid: b272ce34d7f33f244ae716e80191817c, type: 2}
   woodPrefab: {fileID: 5220912763844262521, guid: 715d21a8907623b408a9c276f9770c42, type: 3}
   rockPrefab: {fileID: 1057665975451819601, guid: aee8a98ae26af2640aded203bcf6ef4c, type: 3}
   obstacleChance: 0.3
