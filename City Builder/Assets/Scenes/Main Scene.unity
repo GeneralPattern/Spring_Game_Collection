@@ -603,6 +603,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386777115}
   m_CullTransparentMesh: 1
+--- !u!1 &894972849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 894972850}
+  m_Layer: 0
+  m_Name: ResourceHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &894972850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894972849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1093493228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,7 +1085,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886bd1e618bd7be4ca805408391ba944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingsDatabase: []
+  buildingsDatabase:
+  - buildingID: 1
+    width: 1
+    length: 1
+    buildingModel: {fileID: 4437604898989579082, guid: 7800a079ac644a44086b85d72c9f8329, type: 3}
+    resourceType: 0
 --- !u!4 &1649344212
 Transform:
   m_ObjectHideFlags: 0
@@ -1091,9 +1127,11 @@ MonoBehaviour:
   levelSize: {fileID: 11400000, guid: b272ce34d7f33f244ae716e80191817c, type: 2}
   woodPrefab: {fileID: 5220912763844262521, guid: 715d21a8907623b408a9c276f9770c42, type: 3}
   rockPrefab: {fileID: 1057665975451819601, guid: aee8a98ae26af2640aded203bcf6ef4c, type: 3}
+  resourcesHolder: {fileID: 894972850}
   obstacleChance: 0.3
   xBounds: 3
   zBounds: 3
+  buildingToPlace: {fileID: 3211496029549818323, guid: 7800a079ac644a44086b85d72c9f8329, type: 3}
 --- !u!114 &1649344214
 MonoBehaviour:
   m_ObjectHideFlags: 0

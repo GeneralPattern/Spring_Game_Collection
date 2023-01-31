@@ -8,18 +8,30 @@ public class ObstacleObject : MonoBehaviour
 
     public UnityEvent AddWoodResource;
     public UnityEvent AddStoneResource;
+    public TileObject refTile;
+
+
     private void OnMouseDown()
     {
-        Debug.Log("Clicked on " + gameObject.name);
+        //Debug.Log("Clicked on " + gameObject.name);
 
-        if(gameObject.name == "Wood(Clone)")
+        if(gameObject.tag == "Wood")
         {
             AddWoodResource.Invoke();
+            Destroy(gameObject);
+            refTile.data.CleanTile();
         }
-        if(gameObject.name == "Stone(Clone)")
+        if(gameObject.tag == "Stone")
         {
             AddStoneResource.Invoke();
+            Destroy(gameObject);
+            refTile.data.CleanTile();
         }
+    }
+
+    public void SetTileReference(TileObject obj)
+    {
+        refTile = obj;
     }
 
     public enum ObstacleType
@@ -27,4 +39,6 @@ public class ObstacleObject : MonoBehaviour
         Wood,
         Rock
     }
+
+    
 }

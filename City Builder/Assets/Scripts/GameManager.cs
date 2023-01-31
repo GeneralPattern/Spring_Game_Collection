@@ -14,14 +14,17 @@ public class GameManager : MonoBehaviour
     public Transform tilesHolder;
     public float tileSize = 1;
     public float tileEndHeight = 1;
+    public IntData levelSize;
+
+    [Space(8)]
+    public TileObject[,] tileGrid = new TileObject[0,0];
 
     [Header("Resources")]
     [Space(8)]
 
-    public IntData levelSize;
-
     public GameObject woodPrefab;
     public GameObject rockPrefab;
+    public Transform resourcesHolder;
 
     [Range(0,1)]
     public float obstacleChance = 0.3f;
@@ -29,6 +32,18 @@ public class GameManager : MonoBehaviour
     public int xBounds = 3;
     public int zBounds = 3;
 
+
+    [Space(10)]
+    [Header("Debug Building Method")]
+    [Space(8)]
+    public BuildingObject buildingToPlace;
+
+    public static GameManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -55,11 +70,15 @@ public class GameManager : MonoBehaviour
 
     public void CreateLevel()
     {
+        List<TileObject> visualGrid = new List<TileObject>();
+
         for (int x = 0; x < levelWidth; x++)
         {
             for (int z = 0; z < levelLength; z++)
             {
                 TileObject spawnedTile = SpawnTile(x * tileSize, z * tileSize);
+                spawnedTile.xPos = x;
+                spawnedTile.zPos = z;
 
                 if (x < xBounds || z < zBounds || z >= (levelLength - zBounds) || x >= (levelWidth - xBounds))
                 {
@@ -74,15 +93,18 @@ public class GameManager : MonoBehaviour
                     {
                         spawnedTile.data.SetOccupied(Tile.ObstacleType.Resource);
 
-                        SpawnObstacle(spawnedTile.transform.position.x, spawnedTile.transform.position.z);
+                        ObstacleObject tmpObstacle = SpawnObstacle(spawnedTile.transform.position.x, spawnedTile.transform.position.z);
+                        tmpObstacle.SetTileReference(spawnedTile);
 
-                        //Debug.Log("Spawned obstacle on " + spawnedTile.gameObject.name);
-                        //spawnedTile.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
                     }
                 }
                 
+                visualGrid.Add(spawnedTile);
+
             }
         }
+
+        CreateGrid(visualGrid);
     }
 
     TileObject SpawnTile(float xPos, float zPos)
@@ -97,7 +119,7 @@ public class GameManager : MonoBehaviour
         return tmpTile.GetComponent<TileObject>();
     }
 
-    public void SpawnObstacle(float xPos, float zPos)
+    ObstacleObject SpawnObstacle(float xPos, float zPos)
     {
         bool isWood = Random.value <= 0.5f;
 
@@ -106,12 +128,41 @@ public class GameManager : MonoBehaviour
         if (isWood)
         {
             spawnedObstacle = Instantiate(woodPrefab);
+            spawnedObstacle.name = "Wood" + xPos + " - " + zPos;
         }
         else
         {
             spawnedObstacle = Instantiate(rockPrefab);
+            spawnedObstacle.name = "Stone" + xPos + " - " + zPos;
         }
 
         spawnedObstacle.transform.position = new Vector3(xPos, tileEndHeight, zPos);
+        spawnedObstacle.transform.SetParent(resourcesHolder);
+
+        return spawnedObstacle.GetComponent<ObstacleObject>();
+        
+    }
+
+    public void CreateGrid(List<TileObject> refVisualGrid)
+    {
+        tileGrid = new TileObject[levelWidth, levelLength];
+
+        for (int x = 0; x < levelWidth; x++)
+        {
+            for (int z = 0; z < levelLength; z++)
+            {
+                tileGrid[x,z] = refVisualGrid.Find(v => v.xPos == x && v.zPos == z);
+            }
+        }
+    }
+
+    public void SpawnBuilding(BuildingObject building, TileObject tile)
+    {
+        GameObject spawnedBuilding = Instantiate(building.gameObject);
+
+        Vector3 position = new Vector3(tile.xPos, tileEndHeight, tile.zPos);
+
+        spawnedBuilding.transform.position = position;
+
     }
 }
