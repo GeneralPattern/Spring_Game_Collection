@@ -12,6 +12,7 @@ public class Building
 
     public GameObject buildingModel;
 
+    public float yPadding = 0;
 
     public ResourceType resourceType = ResourceType.None;
 

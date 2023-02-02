@@ -156,13 +156,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SpawnBuilding(BuildingObject building, TileObject tile)
+    public void SpawnBuilding(BuildingObject building, List<TileObject> tiles)
     {
         GameObject spawnedBuilding = Instantiate(building.gameObject);
+        float sumX = 0;
+        float sumZ = 0;
 
-        Vector3 position = new Vector3(tile.xPos, tileEndHeight, tile.zPos);
+        //BAD
+        //Vector3 position = new Vector3(tile.xPos, tileEndHeight, tile.zPos);
+
+        
+
+        for(int i = 0; i < tiles.Count; i++)
+        {
+            sumX += tiles[i].xPos;
+            sumZ += tiles[i].zPos;
+
+            tiles[i].data.SetOccupied(Tile.ObstacleType.Building);
+            Debug.Log("Placed Building at " + tiles[i].xPos + " - " + tiles[i].zPos);
+            
+                
+        }
+
+        Vector3 position = new Vector3( (sumX / tiles.Count), tileEndHeight + building.data.yPadding, (sumZ / tiles.Count));
 
         spawnedBuilding.transform.position = position;
+
+
 
     }
 }
