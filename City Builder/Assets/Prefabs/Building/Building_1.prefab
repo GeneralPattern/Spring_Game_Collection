@@ -53,10 +53,13 @@ MonoBehaviour:
     buildingID: 1
     width: 1
     length: 1
+    woodCost: 50
+    stoneCost: 25
     buildingModel: {fileID: 4437604898989579082}
     yPadding: 0
-    resourceType: 3
+    resourceType: 1
     storageType: 1
+    refOfBuilding: {fileID: 0}
   resourceTypeofProduction: {fileID: 11400000, guid: 586df088fb8b9cf4e9102999cb11094f, type: 2}
   resourceRounded: 0
   resource: 0
@@ -64,19 +67,7 @@ MonoBehaviour:
   generationSpeed: 5
   IncreaseMaxium:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 1b81eb88df4c3d54c8623cb338fbcfce, type: 2}
-        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
-        m_MethodName: IncreaseValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 50
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!65 &4874668689274943250
 BoxCollider:
   m_ObjectHideFlags: 0

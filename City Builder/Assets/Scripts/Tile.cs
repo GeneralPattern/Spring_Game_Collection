@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Tile
 {
-    public Building buildingRef;
+    public BuildingObject buildingRef;
 
     public ObstacleType obstacleType;
 
@@ -24,7 +24,7 @@ public class Tile
         
     }
 
-    public void SetOccupied(ObstacleType t, Building b)
+    public void SetOccupied(ObstacleType t, BuildingObject b)
     {
         obstacleType = t;
         

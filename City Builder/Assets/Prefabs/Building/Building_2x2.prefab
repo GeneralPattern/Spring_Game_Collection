@@ -65,10 +65,13 @@ MonoBehaviour:
     buildingID: 2
     width: 2
     length: 2
+    woodCost: 75
+    stoneCost: 75
     buildingModel: {fileID: 5896210311618921175}
     yPadding: 0
     resourceType: 1
     storageType: 0
+    refOfBuilding: {fileID: 0}
   resourceTypeofProduction: {fileID: 11400000, guid: 7884ccc61e08aef4b8b3899c2e2383b0, type: 2}
   resourceRounded: 0
   resource: 0

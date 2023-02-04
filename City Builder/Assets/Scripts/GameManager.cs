@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
             sumX += tiles[i].xPos;
             sumZ += tiles[i].zPos;
 
-            tiles[i].data.SetOccupied(Tile.ObstacleType.Building);
+            tiles[i].data.SetOccupied(Tile.ObstacleType.Building, spawnedBuilding.GetComponent<BuildingObject>());
             Debug.Log("Placed Building at " + tiles[i].xPos + " - " + tiles[i].zPos);
             
                 
@@ -184,5 +184,16 @@ public class GameManager : MonoBehaviour
 
 
 
+    }
+
+    public void SelectBuilding(int id)
+    {
+        for (int i = 0; i < BuildingsDatabase.Instance.buildingsDatabase.Count; i++)
+        {
+            if (BuildingsDatabase.Instance.buildingsDatabase[i].buildingID == id)
+            {
+                buildingToPlace = BuildingsDatabase.Instance.buildingsDatabase[i].refOfBuilding;
+            }
+        }
     }
 }

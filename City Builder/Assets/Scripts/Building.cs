@@ -10,6 +10,9 @@ public class Building
     public int width = 0;
     public int length = 0;
 
+    public int woodCost = 0;
+    public int stoneCost = 0;
+
     public GameObject buildingModel;
 
     public float yPadding = 0;
@@ -18,6 +21,8 @@ public class Building
 
     public StorageType storageType = StorageType.None;
 
+    
+    public BuildingObject refOfBuilding;
     public enum ResourceType
     {
         None,

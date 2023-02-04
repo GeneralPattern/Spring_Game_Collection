@@ -111,10 +111,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    buildingRef:
-      buildingID: 0
-      width: 0
-      length: 0
-      resourceType: 0
-    occupied: 0
+    buildingRef: {fileID: 0}
     obstacleType: 0
+  wood: {fileID: 11400000, guid: 586df088fb8b9cf4e9102999cb11094f, type: 2}
+  stone: {fileID: 11400000, guid: 7884ccc61e08aef4b8b3899c2e2383b0, type: 2}
+  xPos: 0
+  zPos: 0
+  PlacedBuilding:
+    m_PersistentCalls:
+      m_Calls: []
