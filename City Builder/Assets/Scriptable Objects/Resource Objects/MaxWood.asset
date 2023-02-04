@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4604f942eef54ed449ab781363e0215b, type: 3}
-  m_Name: Wood Amount
+  m_Name: MaxWood
   m_EditorClassIdentifier: 
-  value: 50
-  maxValue: {fileID: 11400000, guid: 1b81eb88df4c3d54c8623cb338fbcfce, type: 2}
+  value: 1100
+  maxValue: {fileID: 0}
   name: Wood

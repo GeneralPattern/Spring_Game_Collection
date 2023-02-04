@@ -7,16 +7,30 @@ using UnityEngine.Events;
 public class IntData : ScriptableObject
 { 
     public int value;
+    public IntData maxValue;
     public new string name;
 
-    public void AddValue(int num)
+    public void IncreaseResource(int num)
     {
-        value += num;
+        if (value < maxValue.value)
+        {
+            value += num;
+            if (value > maxValue.value)
+            {
+                value = maxValue.value;
+            }
+        }
+        
     }
 
     public void SetValue(int num)
     {
         value = num;
+    }
+
+    public void IncreaseValue(int num)
+    {
+        value += num;
     }
 
 }

@@ -16,11 +16,20 @@ public class Building
 
     public ResourceType resourceType = ResourceType.None;
 
+    public StorageType storageType = StorageType.None;
+
     public enum ResourceType
     {
         None,
         Standard,
-        Premium
+        Premium,
+        Storage
+    }
+    public enum StorageType
+    {
+        None,
+        Wood,
+        Stone
     }
 
    

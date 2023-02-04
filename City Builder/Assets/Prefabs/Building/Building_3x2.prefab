@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6811918531209302034}
   - component: {fileID: -4372436788663879559}
+  - component: {fileID: 5401700158793489172}
   m_Layer: 0
   m_Name: Building_3x2
   m_TagString: Untagged
@@ -45,13 +46,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bebe2c2b3110c6438e210996f8ab047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AddResourceFromBuilding:
+    m_PersistentCalls:
+      m_Calls: []
   data:
     buildingID: 3
     width: 2
     length: 3
     buildingModel: {fileID: 6811918531209302037}
     yPadding: 0.1
-    resourceType: 0
+    resourceType: 1
+    storageType: 0
+  resourceTypeofProduction: {fileID: 11400000, guid: 586df088fb8b9cf4e9102999cb11094f, type: 2}
+  resourceRounded: 0
+  resource: 0
+  resourceLimit: 100
+  generationSpeed: 5
+  IncreaseMaxium:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!65 &5401700158793489172
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811918531209302037}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.09, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &383865362098439065
 PrefabInstance:
   m_ObjectHideFlags: 0

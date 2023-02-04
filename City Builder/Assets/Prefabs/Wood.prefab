@@ -116,7 +116,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 586df088fb8b9cf4e9102999cb11094f, type: 2}
         m_TargetAssemblyTypeName: IntData, Assembly-CSharp
-        m_MethodName: AddValue
+        m_MethodName: IncreaseResource
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

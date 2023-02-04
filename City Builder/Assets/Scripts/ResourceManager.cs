@@ -25,7 +25,6 @@ public class ResourceManager : MonoBehaviour
     {
         Instance = this;
     }
-
     public void AddWood(int amount)
     {
         wood += amount;
