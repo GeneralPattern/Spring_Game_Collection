@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class BuildingObject : MonoBehaviour
 {
@@ -22,6 +23,13 @@ public class BuildingObject : MonoBehaviour
     public float resourceLimit = 100;
 
     public float generationSpeed = 5;
+    
+    [Header("UI")]
+    [Space(10)]
+    
+    public Slider progressSlider;
+
+    public GameObject canvasObject;
 
     [Space(10)] 
     public UnityEvent IncreaseMaxium;
@@ -36,7 +44,9 @@ public class BuildingObject : MonoBehaviour
 
             if (data.resourceType == Building.ResourceType.Storage)
             {
+                canvasObject.SetActive(false);
                 IncreaseMaxium.Invoke();
+                
             }
         }
         
@@ -86,7 +96,16 @@ public class BuildingObject : MonoBehaviour
             {
                 resource = resourceLimit;
             }
+            
+            UpdateUI(resource, resourceLimit);
             yield return null;
         }
     }
+
+    public void UpdateUI(float current, float maxValue)
+    {
+        progressSlider.value = current;
+        progressSlider.maxValue = maxValue;
+    }
+    
 }
