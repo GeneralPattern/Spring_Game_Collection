@@ -21,6 +21,8 @@ public class Building
 
     public StorageType storageType = StorageType.None;
 
+    public BoolData Research;
+
     
     public BuildingObject refOfBuilding;
     public enum ResourceType

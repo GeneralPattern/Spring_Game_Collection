@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu]
+[CreateAssetMenu (fileName = "Int Data", menuName = "Data/Int Data")]
 public class IntData : ScriptableObject
 { 
     public int value;
