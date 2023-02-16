@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ResearchManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public BoolData research;
 
-    // Update is called once per frame
-    void Update()
+    public void CompleteResearch()
     {
-        
+        research.setTrue();
+        research.researchComplete.Invoke();
+        Debug.Log("It worked");
     }
 }
