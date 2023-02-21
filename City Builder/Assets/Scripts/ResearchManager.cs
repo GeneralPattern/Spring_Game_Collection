@@ -7,6 +7,7 @@ public class ResearchManager : MonoBehaviour
 {
     public float time = 0.0f;
     public BoolData research;
+    public IntData researchLevel;
     public UnityEvent researched;
     
     public void StartResearch()
