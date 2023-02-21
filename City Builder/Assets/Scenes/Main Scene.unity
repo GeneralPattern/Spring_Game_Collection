@@ -219,18 +219,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1649344215}
-        m_TargetAssemblyTypeName: ResearchManager, Assembly-CSharp
-        m_MethodName: CompleteResearch
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &3237154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2929,7 +2917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1249183493
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3341,6 +3329,7 @@ GameObject:
   - component: {fileID: 1649344213}
   - component: {fileID: 1649344214}
   - component: {fileID: 1649344215}
+  - component: {fileID: 1649344216}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -3379,7 +3368,7 @@ MonoBehaviour:
     stoneCost: 0
     buildingModel: {fileID: 5896210311618921175, guid: b9b1614958b9d6345a70577ac5b3af80, type: 3}
     yPadding: 1
-    resourceType: 1
+    resourceType: 4
     storageType: 0
     Research: {fileID: 0}
     refOfBuilding: {fileID: -6309544153853139834, guid: b9b1614958b9d6345a70577ac5b3af80, type: 3}
@@ -3496,7 +3485,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3da03e53426524caf1395a56386594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
   research: {fileID: 11400000, guid: 5f81d569c7965bb42b9055775da2c20e, type: 2}
+  researched:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1649344216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649344210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc2765d862d61a4f8e361c9efb8cd84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateTextEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  completedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1649344215}
+        m_TargetAssemblyTypeName: ResearchManager, Assembly-CSharp
+        m_MethodName: CompleteResearch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  canRun: {fileID: 11400000, guid: 5f81d569c7965bb42b9055775da2c20e, type: 2}
+  timer: {fileID: 11400000, guid: 9e05f6174e8c7384b92c329323b1a2fe, type: 2}
 --- !u!1 &1723986359
 GameObject:
   m_ObjectHideFlags: 0
@@ -4468,7 +4505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Building 1
+  m_text: Library
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

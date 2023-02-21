@@ -30,7 +30,8 @@ public class Building
         None,
         Standard,
         Premium,
-        Storage
+        Storage,
+        Research
     }
     public enum StorageType
     {

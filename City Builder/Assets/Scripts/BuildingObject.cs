@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class BuildingObject : MonoBehaviour
 {
-    public UnityEvent AddResourceFromBuilding;
+    public UnityEvent AddResourceFromBuilding, researchPanel;
     public Building data;
     
     [Header("Resource Creation")]
@@ -74,6 +74,12 @@ public class BuildingObject : MonoBehaviour
             {
                 resourceTypeofProduction.value += resourceRounded;
                 EmptyResource();
+                break;
+            }
+            
+            case Building.ResourceType.Research:
+            {
+                researchPanel.Invoke();
                 break;
             }
         }

@@ -5,12 +5,19 @@ using UnityEngine.Events;
 
 public class ResearchManager : MonoBehaviour
 {
+    public float time = 0.0f;
     public BoolData research;
-
-    public void CompleteResearch()
+    public UnityEvent researched;
+    
+    public void StartResearch()
     {
+        
+        
+    }
+    public void CompleteResearch()
+    { 
+        Debug.Log("RESEARCHED");
         research.setTrue();
-        research.researchComplete.Invoke();
-        Debug.Log("It worked");
+        researched.Invoke();
     }
 }
