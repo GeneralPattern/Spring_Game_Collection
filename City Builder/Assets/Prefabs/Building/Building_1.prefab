@@ -1246,6 +1246,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: cdaa64ede0abc464ea304ab0482d7088, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: IncreaseValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   canRun: {fileID: 11400000, guid: 5f81d569c7965bb42b9055775da2c20e, type: 2}
   timer: {fileID: 11400000, guid: 9e05f6174e8c7384b92c329323b1a2fe, type: 2}
 --- !u!114 &5739472424466451251
@@ -1262,6 +1274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0
   research: {fileID: 11400000, guid: 5f81d569c7965bb42b9055775da2c20e, type: 2}
+  researchLevel: {fileID: 0}
   researched:
     m_PersistentCalls:
       m_Calls:

@@ -34,9 +34,13 @@ public class GameManager : MonoBehaviour
 
 
     [Space(10)]
-    [Header("Debug Building Method")]
+    [Header("Building Method")]
     [Space(8)]
     public BuildingObject buildingToPlace;
+
+    [Header("Building Research Level")]
+    [Space(10)]
+    public IntData buildingResearchLevel;
 
     public static GameManager Instance;
 
@@ -194,6 +198,14 @@ public class GameManager : MonoBehaviour
             {
                 buildingToPlace = BuildingsDatabase.Instance.buildingsDatabase[i].refOfBuilding;
             }
+        }
+    }
+
+    public void Update()
+    {
+        if (buildingResearchLevel.value == 1)
+        {
+            Debug.Log("UH OH STINKY");
         }
     }
 }
