@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject manager;
+    
     [Header("Builder")]
     [Space(8)]
 
@@ -43,8 +45,8 @@ public class GameManager : MonoBehaviour
     [Space(10)]
     public IntData buildingResearchLevel;
 
-    public UnityEvent researchUnlocks;
-
+    
+    
     public static GameManager Instance;
 
     private void Awake()
@@ -204,8 +206,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void UpdateResearch()
+    public static void UpdateResearch()
     {
         Debug.Log("This got freaky once");
+        
     }
 }
