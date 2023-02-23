@@ -9,6 +9,8 @@ public class ResearchManager : MonoBehaviour
     public BoolData research;
     public IntData researchLevel;
     public UnityEvent researched;
+
+    public GameObject gameManager;
     
     public void StartResearch()
     {
@@ -16,7 +18,7 @@ public class ResearchManager : MonoBehaviour
         
     }
     public void CompleteResearch()
-    { 
+    {
         Debug.Log("RESEARCHED");
         research.setTrue();
         researched.Invoke();

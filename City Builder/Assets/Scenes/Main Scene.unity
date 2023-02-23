@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -319.4, y: -293.6}
+  m_AnchoredPosition: {x: -319.4, y: -167.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3237153
@@ -3229,7 +3229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 119.29999, y: -16.600006}
+  m_AnchoredPosition: {x: 119.29999, y: -16.600037}
   m_SizeDelta: {x: 80, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499641276
@@ -3416,6 +3416,17 @@ MonoBehaviour:
     storageType: 0
     Research: {fileID: 0}
     refOfBuilding: {fileID: 3211496029549818323, guid: c4d623bbe13cd314d960a139b3640e0a, type: 3}
+  - buildingID: 7
+    width: 1
+    length: 1
+    woodCost: 0
+    stoneCost: 0
+    buildingModel: {fileID: 0}
+    yPadding: 1
+    resourceType: 1
+    storageType: 0
+    Research: {fileID: 0}
+    refOfBuilding: {fileID: 0}
 --- !u!4 &1649344212
 Transform:
   m_ObjectHideFlags: 0
@@ -3458,6 +3469,9 @@ MonoBehaviour:
   zBounds: 3
   buildingToPlace: {fileID: 0}
   buildingResearchLevel: {fileID: 11400000, guid: cdaa64ede0abc464ea304ab0482d7088, type: 2}
+  researchUnlocks:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1649344214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3504,6 +3518,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  gameManager: {fileID: 0}
 --- !u!114 &1649344216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4031,7 +4046,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 9
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

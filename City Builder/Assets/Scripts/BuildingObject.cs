@@ -113,5 +113,4 @@ public class BuildingObject : MonoBehaviour
         progressSlider.value = current;
         progressSlider.maxValue = maxValue;
     }
-    
 }

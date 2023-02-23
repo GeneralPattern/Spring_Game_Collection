@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -41,6 +42,8 @@ public class GameManager : MonoBehaviour
     [Header("Building Research Level")]
     [Space(10)]
     public IntData buildingResearchLevel;
+
+    public UnityEvent researchUnlocks;
 
     public static GameManager Instance;
 
@@ -201,11 +204,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Update()
+    public void UpdateResearch()
     {
-        if (buildingResearchLevel.value == 1)
-        {
-            Debug.Log("UH OH STINKY");
-        }
+        Debug.Log("This got freaky once");
     }
 }
