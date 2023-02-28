@@ -25,7 +25,7 @@ public class CameraController : MonoBehaviour
 
             float difference = currentMagnitude - prevMagnitude;
             
-            zoom(difference * 0.01f);
+            zoom(difference * 0.005f);
         }
         
         if (Input.GetMouseButton(0))

@@ -16,6 +16,8 @@ public class TileObject : MonoBehaviour
    public int zPos = 0;
 
    public UnityEvent PlacedBuilding;
+   public UnityEvent NotEnoughWood;
+   public UnityEvent NotEnoughStone;
    private void OnMouseDown()
    {
       //Debug.Log("Clicked on " + gameObject.name);
@@ -80,13 +82,13 @@ public class TileObject : MonoBehaviour
                }
                else
                {
-                  Debug.Log("Not Enough Stone");
+                  NotEnoughStone.Invoke();
                   return;
                }
             }
             else
             {
-               Debug.Log("Not Enough Wood");
+               NotEnoughWood.Invoke();
                return;
             }
          }

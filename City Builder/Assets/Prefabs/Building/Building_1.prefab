@@ -130,7 +130,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 5
+          m_FloatArgument: 30
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1323,8 +1323,8 @@ MonoBehaviour:
     buildingID: 1
     width: 1
     length: 1
-    woodCost: 50
-    stoneCost: 25
+    woodCost: 100
+    stoneCost: 100
     buildingModel: {fileID: 4437604898989579082}
     yPadding: 0
     resourceType: 4
@@ -1440,7 +1440,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  gameManager: {fileID: 0}
+      - m_Target: {fileID: 11400000, guid: f6fa70d0cfee27b4b853b9ad63e077e6, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4673308875072845219
 GameObject:
   m_ObjectHideFlags: 0

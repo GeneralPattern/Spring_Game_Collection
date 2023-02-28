@@ -205,10 +205,4 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
-    public static void UpdateResearch()
-    {
-        Debug.Log("This got freaky once");
-        
-    }
 }

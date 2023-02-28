@@ -17,7 +17,7 @@ public class ResearchManager : MonoBehaviour
     }
     public void CompleteResearch()
     {
-        GameManager.UpdateResearch();
+        
         research.setTrue();
         researched.Invoke();
     }
