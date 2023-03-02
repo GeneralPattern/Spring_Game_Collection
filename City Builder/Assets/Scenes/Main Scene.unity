@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18115802, g: 0.2267461, b: 0.30732164, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10209,14 +10209,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107239785}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.42208835, y: 0.015755732, z: 0.25399128, w: 0.8701044}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 46.595, y: 20.606, z: 41.498}
 --- !u!1 &1108397301
 GameObject:
   m_ObjectHideFlags: 0
@@ -20295,6 +20295,17 @@ MonoBehaviour:
     storageType: 0
     Research: {fileID: 0}
     refOfBuilding: {fileID: 0}
+  - buildingID: 8
+    width: 2
+    length: 2
+    woodCost: 0
+    stoneCost: 0
+    buildingModel: {fileID: 2446205375606179904, guid: 3e717499c20ea744ba15f495997cda51, type: 3}
+    yPadding: 1
+    resourceType: 1
+    storageType: 0
+    Research: {fileID: 0}
+    refOfBuilding: {fileID: 7452295157528883219, guid: 3e717499c20ea744ba15f495997cda51, type: 3}
 --- !u!4 &1649344212
 Transform:
   m_ObjectHideFlags: 0
@@ -21286,7 +21297,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
