@@ -631,6 +631,7 @@ MonoBehaviour:
         m_CallState: 2
   data:
     buildingID: 8
+    name: 
     width: 1
     length: 1
     woodCost: 100
@@ -1037,7 +1038,7 @@ ParticleSystem:
   m_GameObject: {fileID: 2977039664089094832}
   serializedVersion: 8
   lengthInSec: 5
-  simulationSpeed: 1
+  simulationSpeed: 0.5
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0

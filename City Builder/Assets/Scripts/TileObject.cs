@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -82,12 +81,14 @@ public class TileObject : MonoBehaviour
                }
                else
                {
+                  Debug.Log("Not enough stone");
                   NotEnoughStone.Invoke();
                   return;
                }
             }
             else
             {
+               Debug.Log("Not enough wood");
                NotEnoughWood.Invoke();
                return;
             }

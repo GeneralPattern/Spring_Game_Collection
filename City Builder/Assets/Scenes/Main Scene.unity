@@ -675,7 +675,7 @@ MonoBehaviour:
   _assetName: Rock
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 130
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -6039,7 +6039,7 @@ GameObject:
   - component: {fileID: 534379579}
   - component: {fileID: 534379578}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: Menu Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7261,7 +7261,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 669581970}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1649344216}
+        m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
+        m_MethodName: GameQuit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &669581970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8173,7 +8185,7 @@ MonoBehaviour:
   _assetName: Rock2
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 134
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -9298,7 +9310,7 @@ MonoBehaviour:
   _assetName: Rock3
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 50
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -9973,7 +9985,7 @@ MonoBehaviour:
   _assetName: Rock4
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 128
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -17916,7 +17928,7 @@ MonoBehaviour:
   _assetName: Rock23
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 130
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -18439,7 +18451,7 @@ MonoBehaviour:
   _assetName: Rock5
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 100
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -19004,7 +19016,7 @@ MonoBehaviour:
   _assetName: Rock6
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 44
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -19224,7 +19236,7 @@ MonoBehaviour:
   _assetName: Rock7
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 38
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -20219,6 +20231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingsDatabase:
   - buildingID: 1
+    name: 
     width: 1
     length: 1
     woodCost: 0
@@ -20230,6 +20243,7 @@ MonoBehaviour:
     Research: {fileID: 0}
     refOfBuilding: {fileID: 3211496029549818323, guid: 7800a079ac644a44086b85d72c9f8329, type: 3}
   - buildingID: 2
+    name: 
     width: 2
     length: 2
     woodCost: 0
@@ -20241,6 +20255,7 @@ MonoBehaviour:
     Research: {fileID: 0}
     refOfBuilding: {fileID: -6309544153853139834, guid: b9b1614958b9d6345a70577ac5b3af80, type: 3}
   - buildingID: 3
+    name: 
     width: 3
     length: 2
     woodCost: 0
@@ -20252,6 +20267,7 @@ MonoBehaviour:
     Research: {fileID: 0}
     refOfBuilding: {fileID: 2896120564768388524, guid: b0973db02a33b924c8bf5ffc4b70543e, type: 3}
   - buildingID: 4
+    name: 
     width: 2
     length: 2
     woodCost: 0
@@ -20263,6 +20279,7 @@ MonoBehaviour:
     Research: {fileID: 0}
     refOfBuilding: {fileID: 1620140079139523157, guid: 572b868a62a554649906cb6d9387edca, type: 3}
   - buildingID: 5
+    name: 
     width: 2
     length: 2
     woodCost: 0
@@ -20274,6 +20291,7 @@ MonoBehaviour:
     Research: {fileID: 0}
     refOfBuilding: {fileID: 695501698, guid: e6d53c6bcd64f814a8060b94c8b4f946, type: 3}
   - buildingID: 6
+    name: 
     width: 1
     length: 1
     woodCost: 0
@@ -20285,6 +20303,7 @@ MonoBehaviour:
     Research: {fileID: 0}
     refOfBuilding: {fileID: 3211496029549818323, guid: c4d623bbe13cd314d960a139b3640e0a, type: 3}
   - buildingID: 7
+    name: placeholder
     width: 1
     length: 1
     woodCost: 0
@@ -20296,6 +20315,7 @@ MonoBehaviour:
     Research: {fileID: 0}
     refOfBuilding: {fileID: 0}
   - buildingID: 8
+    name: Library
     width: 2
     length: 2
     woodCost: 0
@@ -20306,6 +20326,18 @@ MonoBehaviour:
     storageType: 0
     Research: {fileID: 0}
     refOfBuilding: {fileID: 7452295157528883219, guid: 3e717499c20ea744ba15f495997cda51, type: 3}
+  - buildingID: 9
+    name: Stone Storage
+    width: 3
+    length: 2
+    woodCost: 0
+    stoneCost: 0
+    buildingModel: {fileID: 0}
+    yPadding: 1
+    resourceType: 1
+    storageType: 0
+    Research: {fileID: 0}
+    refOfBuilding: {fileID: 0}
 --- !u!4 &1649344212
 Transform:
   m_ObjectHideFlags: 0
@@ -21056,7 +21088,7 @@ MonoBehaviour:
   _assetName: Rock22
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 98
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -21542,7 +21574,7 @@ MonoBehaviour:
   _assetName: Rock25
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 134
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -21926,7 +21958,7 @@ MonoBehaviour:
   _assetName: Rock7
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 100
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -22313,7 +22345,7 @@ MonoBehaviour:
   _assetName: Rock16
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 38
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -23941,7 +23973,7 @@ MonoBehaviour:
   _assetName: Rock17
   _assetOpName: Sop/Rock
   _assetHelp: 
-  _assetID: 50
+  _assetID: -1
   _assetPath: D:/HoudiniAssets/Rock.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
