@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
@@ -5,7 +7,6 @@ public class Building
 {   
     public int buildingID;
 
-    public string name;
     public int width = 0;
     public int length = 0;
 
